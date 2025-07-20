@@ -1,16 +1,20 @@
 # Zed settings
-## cole esse json em settings.json do zed.
+Para ativar essas configuracoes, basta colar os seguintes arquivos json "settings.json" e "keymap.json" no diretorio: /home/gilberto/.config/zed
+salvar e pronto, as configs ja estarao funcionando.
 
+## settings.json:
 {
-    "context_servers": {
-        
-    },
+    "context_servers": {},
     "agent": {
+        "default_profile": "write",
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4.1"
+        },
         "single_file_review": true,
         "always_allow_tool_actions": false,
         "model_parameters": [],
-        "dock": "left",
-        "version": "2"
+        "dock": "left"
     },
     "git_panel": {
         "dock": "right"
@@ -22,12 +26,12 @@
     "buffer_font_family": "JetBrains Mono NL",
     "ui_font_size": 16,
     "buffer_font_size": 16,
-    "preferred_line_length": 120,
+    "preferred_line_length": 80,
     "soft_wrap": "preferred_line_length",
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "One Dark"
+        "dark": "Dracula Solid"
     },
     "terminal": {
         "blinking": "on",
@@ -56,3 +60,23 @@
         "hide_root": false
     }
 }
+
+## keymap.json
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
+            "ctrl-alt-b": "workspace::ToggleLeftDock",
+            "ctrl-b": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            // "j k": ["workspace::SendKeystrokes", "escape"]
+            "alt-shift-down": "editor::DuplicateLineDown",
+            "alt-shift-up": "editor::DuplicateLineUp"
+        }
+    }
+]
