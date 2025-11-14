@@ -1,5 +1,5 @@
 # Zed settings
-Para ativar essas configuracoes, basta colar os seguintes arquivos json "settings.json" e "keymap.json" no diretorio: /home/gilberto/.config/zed
+Para ativar essas configuracoes, basta colar os seguintes arquivos json "settings.json", "keymap.json" e o diretorio themes no diretorio: /home/gilberto/.config/zed
 salvar e pronto, as configs ja estarao funcionando.
 
 ## settings.json:
