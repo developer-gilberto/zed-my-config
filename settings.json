@@ -7,11 +7,53 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "colorize_brackets": true,
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "code_actions_on_format": {
+    "source.organizeImports.biome": true,
+    "source.fixAll.biome": true,
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+    },
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "minimap": {
+    "current_line_highlight": "line",
+    "thumb": "hover",
+    "show": "always",
+  },
   "show_edit_predictions": false,
   "disable_ai": false,
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "redact_private_values": false,
   "message_editor": {
     "auto_replace_emoji_shortcode": true,
@@ -39,8 +81,8 @@
     "enable_feedback": true,
     "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
     },
     "single_file_review": true,
     "always_allow_tool_actions": false,
@@ -51,7 +93,12 @@
     "dock": "right",
   },
   "tab_size": 2,
-  "scrollbar": { "show": "auto" },
+  "scrollbar": {
+    "axes": {
+      "horizontal": true,
+    },
+    "show": "auto",
+  },
   "icon_theme": "Zed (Default)",
   "base_keymap": "VSCode",
   "buffer_font_family": ".ZedMono",
